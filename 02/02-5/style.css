@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+
+}
+
+.app-ui {
+    position: relative;
+    background-color: whitesmoke;
+    width: 360px;
+    height: 640px;
+    transform: rotate(-30deg) skewX(20deg) scale(0.8);
+    box-shadow: -10px 5px 10px 10px rgba(0,0,0,0.4);
+    transition: 1s;
+}
+
+.app-ui img {
+    position: absolute;
+    transition: 1s;
+}
+
+.app-ui:hover {
+    box-shadow: 0 80px 60px lightgray;
+}
+.app-ui:hover img:nth-child(1) {
+    transform: translate(40px,-40px);
+    opacity: 0.2;
+}
+
+.app-ui:hover img:nth-child(2) {
+    transform: translate(80px,-80px);
+    opacity: 0.4;
+}
+
+.app-ui:hover img:nth-child(3) {
+    transform: translate(120px,-120px);
+    opacity: 0.6;
+}
+
+.app-ui:hover img:last-child {
+    transform: translate(160px,-160px);
+}

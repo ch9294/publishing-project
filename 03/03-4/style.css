@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, yellow, limegreen);
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* ===================== 내가 한것 ===================== */
+/*.gnb {*/
+/*    border-radius: 10px;*/
+/*    width: 70%;*/
+/*    display: flex;*/
+/*    list-style: none;*/
+/*    justify-content: space-around;*/
+/*    align-items: center;*/
+/*    padding: 20px;*/
+/*    font-size: 20px;*/
+/*    font-weight: 400;*/
+/*    background: white;*/
+/*}*/
+
+/*.gnb li {*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    width: 100px;*/
+/*    height: 30px;*/
+/*}*/
+
+/*.gnb li a, .gnb li::after {*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*    width: inherit;*/
+/*    height: inherit;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    transition: .5s;*/
+/*}*/
+
+/*.gnb li a {*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*}*/
+
+/*.gnb li::after {*/
+/*    content: attr(data-link);*/
+/*    color: forestgreen;*/
+/*    left: 0;*/
+/*    top: 100%;*/
+/*}*/
+
+/*.gnb li:nth-child(1):after {*/
+/*    content: '메일';*/
+/*}*/
+
+/*.gnb li:nth-child(2):after {*/
+/*    content: '카페';*/
+/*}*/
+
+/*.gnb li:nth-child(3):after {*/
+/*    content: '블로그';*/
+/*}*/
+
+/*.gnb li:nth-child(4):after {*/
+/*    content: '지식iN';*/
+/*}*/
+
+/*.gnb li:nth-child(5):after {*/
+/*    content: '쇼핑';*/
+/*}*/
+
+/*.gnb li:nth-child(6):after {*/
+/*    content: 'Pay';*/
+/*}*/
+
+/*.gnb li:nth-child(7):after {*/
+/*    content: '사전';*/
+/*}*/
+
+/*.gnb li:nth-child(8):after {*/
+/*    content: '뉴스';*/
+/*}*/
+
+/*.gnb li:hover a {*/
+/*    top: -100%*/
+/*}*/
+
+/*.gnb li:hover::after {*/
+/*    top: 0;*/
+/*}*/
+/* ===================== 내가 한것 ===================== */
+
+.gnb {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+}
+
+.gnb a {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gnb a::before, .gnb a::after {
+    position: absolute;
+    content: attr(data-link);
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    transition: .3s;
+}
+
+.gnb a::after {
+    top: 100%;
+    color: #45b649;
+}
+
+.gnb a:hover::before {
+    top: -100%;
+    left: 0;
+}
+
+.gnb a:hover::after {
+    top: 0;
+    left: 0;
+}
+
+/*.gnb a span {*/
+/*    position: absolute;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    transition: .5s;*/
+/*}*/
+
+/*.gnb a span:nth-child(1) {*/
+
+/*}*/
+
+/*.gnb a span:nth-child(2) {*/
+/*    top: 100%;*/
+/*    left: 0;*/
+/*    color: #45b649;*/
+/*}*/
+
+/*.gnb a:hover span:nth-child(1){*/
+/*    top: -100%;*/
+/*}*/
+
+/*.gnb a:hover span:nth-child(2){*/
+/*    top: 0;*/
+/*}*/

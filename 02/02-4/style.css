@@ -1,0 +1,178 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* ========================== 내가 한 것 ========================== */
+/*.container {*/
+
+/*}*/
+
+/*.planet {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    width: 350px;*/
+/*    transition: 1s;*/
+/*    margin: 0 10px;*/
+/*}*/
+
+/*.title {*/
+/*    position: absolute;*/
+/*    width: inherit;*/
+/*    height: 230px;*/
+/*    text-align: center;*/
+/*    border-radius: 10px 10px 0 0;*/
+/*    background-color: #222222;*/
+/*    box-sizing: border-box;*/
+/*    transition: .7s;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.title h1 {*/
+/*    color: white;*/
+/*}*/
+
+/*.detail {*/
+/*    background-color: white;*/
+/*    height: 230px;*/
+/*    padding: 20px;*/
+/*    border-radius: 10px 10px 10px 10px;*/
+/*    text-align: center;*/
+/*    box-sizing: border-box;*/
+/*    opacity: 0;*/
+/*    transition: .7s;*/
+/*}*/
+
+/*.detail p {*/
+/*    padding: 10px;*/
+/*    text-align: center;*/
+/*    color: black;*/
+/*    font-weight: 400;*/
+/*}*/
+
+/*.detail a {*/
+/*    display: inline-block;*/
+/*    text-align: center;*/
+/*    width: 100px;*/
+/*    border-radius: 20px;*/
+/*    padding: 5px;*/
+/*    background-color: limegreen;*/
+/*    color: white;*/
+/*}*/
+
+/*.planet:hover .title > img {*/
+/*    animation: beating infinite 1s;*/
+/*}*/
+
+/*.planet:hover .title {*/
+/*    transform: translateY(-50%);*/
+/*}*/
+
+/*.planet:hover .detail {*/
+/*    opacity: 1;*/
+/*    transform: translateY(50%);*/
+/*    border-radius: 0 0 10px 10px;*/
+/*}*/
+
+/*@keyframes beating {*/
+/*    0% {*/
+/*        transform: scale(1);*/
+/*    }*/
+
+/*    50% {*/
+/*        transform: scale(1.2);*/
+/*    }*/
+
+/*    100% {*/
+/*        transform: scale(1);*/
+/*    }*/
+/*}*/
+/* ========================== 내가 한 것 ========================== */
+
+.items {
+
+}
+
+.item {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.front, .back {
+    position: absolute;
+    transition: .5s;
+}
+
+.front {
+    width: 100%;
+    text-align: center;
+    height: inherit;
+    background-color: #333;
+    z-index: 1;
+    top: 0;
+    color: white;
+}
+
+.back {
+    background-color: white;
+    color: black;
+    height: inherit;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+}
+
+.item:hover .front {
+    top: -50%;
+}
+
+.item:hover .back {
+    top: 50%;
+}
+
+.item:hover .front img {
+    animation: ani 1s linear infinite;
+}
+
+.front h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.back a {
+    background-color: yellowgreen;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.back a:hover {
+    background-color: black;
+}
+
+@keyframes ani {
+    0%,100% {
+        transform: scale(.9);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}

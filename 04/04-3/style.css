@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    height: 100vh;
+}
+
+.gallery {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.gallery li {
+    flex: 1;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: .7s;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery li:hover {
+    flex: 3;
+    filter: grayscale(1);
+}
+
+.gallery li:nth-child(1) {
+    background-image: url("images/artistic-image-01.jpg");
+}
+
+.gallery li:nth-child(2) {
+    background-image: url("images/artistic-image-02.jpg");
+}
+
+.gallery li:nth-child(3) {
+    background-image: url("images/artistic-image-03.jpg");
+}
+
+.gallery li:nth-child(4) {
+    background-image: url("images/artistic-image-04.jpg");
+}
+
+.gallery li:nth-child(5) {
+    background-image: url("images/artistic-image-05.jpg");
+}
+
+.gallery li + li {
+    border-left: 5px solid;
+}
+
+.content {
+    position: absolute;
+    bottom: -300px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 250px;
+    padding: 40px 20px 20px;
+    box-sizing: border-box;
+    transition: .3s;
+    z-index: 1;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    top: -20px;
+    left: 0;
+    transform-origin: left bottom;
+    transform: rotate(-2deg) scale(1.3);
+}
+
+.gallery li:hover .content {
+    bottom: 0;
+    transition-delay: .5s;
+}
+
+.content h2 {
+
+}
+
+.content p {
+
+}
+
+.sns a {
+    color: white;
+}
+

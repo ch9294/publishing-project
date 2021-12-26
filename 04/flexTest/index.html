@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.parent {
+			border: 2px solid black;
+			display: flex;
+			width: 500px;
+			transition: 3s;
+		}
+
+		.child {
+			height: 100px;
+		}
+
+		.child:nth-child(1) {
+			flex: 1 1 auto;
+			background: blue;
+		}
+
+		.child:nth-child(2) {
+			flex: 1 2 auto;
+			background: red;
+		}
+
+		.child:nth-child(3) {
+			flex: 1 1 auto;
+			background: green;
+		}
+
+		.parent:hover {
+			transform-origin: top left ;
+			transform: scaleX(2);
+		}
+	</style>
+</head>
+<body>
+
+<div class="parent">
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+</div>
+</body>
+</html>

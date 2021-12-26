@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrapper {
+    display: flex;
+
+}
+
+.square {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+#wrapper .square:nth-child(2) {
+    margin: 0 50px;
+}
+
+.square span {
+    display: inline-block;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: 1px solid white;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+    transition: 0.5s;
+    animation: rotating 3s infinite linear;
+}
+
+#wrapper .square:nth-child(1):hover span {
+    background-color: dodgerblue;
+    border: none;
+}
+
+#wrapper .square:nth-child(2):hover span {
+    background-color: crimson;
+    border: none;
+}
+
+#wrapper .square:nth-child(3):hover span {
+    background-color: orange;
+    border: none;
+}
+
+.square span:first-child {
+}
+
+.square span:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.square span:nth-child(3) {
+    animation-direction: reverse;
+}
+
+.square:hover span:first-child {
+    opacity: 0.3;
+}
+
+.square:hover span:nth-child(2) {
+    opacity: 0.5;
+}
+
+.square:hover span:last-child {
+    opacity: 0.8;
+}
+
+.content {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.content h2 {
+    text-align: center;
+}
+
+.content p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.content a {
+    width: 100px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

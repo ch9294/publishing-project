@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* ======================= 내가 한 것 ======================= */
+
+.gnb {
+    width: 800px;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background-color: whitesmoke;
+}
+
+.gnb li {
+    position: relative;
+    box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 50px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.gnb li a {
+    position: absolute;
+    display: flex;
+    width: inherit;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: .5s;
+}
+
+.gnb li::after {
+    position: absolute;
+    top:100%;
+    content: '';
+    display: block;
+    width: inherit;
+    height: inherit;
+    transition: .5s;
+    z-index: 0;
+}
+
+.gnb li:hover::after {
+    top: 0;
+}
+
+.gnb li:hover a {
+    transform: rotateY(1turn);
+    color: white;
+}
+
+.gnb li:nth-child(1)::after{
+    background-color: #3b5998;
+}
+
+.gnb li:nth-child(2)::after{
+    background-color: #00ACEE;
+}
+
+.gnb li:nth-child(3)::after{
+    background-color: #db4a39;
+}
+
+.gnb li:nth-child(4)::after{
+    background-color: #0E76A8;
+}
+
+.gnb li:nth-child(5)::after{
+    background-color: #C13584;
+}
+/* ======================= 내가 한 것 ======================= */

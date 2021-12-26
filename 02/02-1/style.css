@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    height: 100vh;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* ========================== 내가 한 것 ========================== */
+/*.container {*/
+/*    height: inherit;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.product {*/
+/*    width: 300px;*/
+/*    height: 300px;*/
+/*    border: 1px solid rgba(0, 0, 0, 0.17);*/
+/*    background: url("images/product-01.png") no-repeat center;*/
+/*    background-size: contain;*/
+/*}*/
+
+/*.container .product:nth-child(2){*/
+/*    background-image: url("images/product-02.png");*/
+/*    margin: 0 30px;*/
+/*}*/
+
+/*.container .product:nth-child(3){*/
+/*    background-image: url("images/product-03.png");*/
+/*}*/
+
+/*.introduce {*/
+/*    display: none;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    box-sizing: border-box;*/
+/*    padding: 20px;*/
+/*    height: inherit;*/
+/*    text-align: center;*/
+/*    transition: .5s;*/
+/*}*/
+
+/*.introduce p span {*/
+/*    text-decoration: line-through;*/
+/*}*/
+
+/*.product:hover .introduce {*/
+/*    display: flex;*/
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+/*    color: white;*/
+/*}*/
+
+/*.product a {*/
+/*    background-color: mediumseagreen;*/
+/*    border-radius: 5px;*/
+/*    padding: 7px;*/
+/*    color: white;*/
+/*}*/
+/* ========================== 내가 한 것 ========================== */
+
+.items {
+    border: 1px solid;
+    text-align: center;
+}
+
+.item {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.items .item:nth-child(2){
+    margin: 30px;
+}
+
+.item img {
+
+}
+
+.caption {
+    width: inherit;
+    height: inherit;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    padding: 40px 20px 20px;
+    box-sizing: border-box;
+    color: white;
+    transition: .5s;
+}
+
+.item:hover .caption {
+    opacity: 1;
+}
+
+.caption a {
+    color: white;
+    background-color: teal;
+    border-radius: 3px;
+    padding: 7px;
+    transition: 0.5s;
+}
+
+.caption a:hover {
+    background-color: black;
+}
