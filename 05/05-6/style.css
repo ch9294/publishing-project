@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 300px;
+    height: 330px;
+    overflow: hidden;
+    position: relative;
+}
+
+input[name=tab] {
+    display: none;
+}
+
+.slide {
+    position: relative;
+    width: inherit;
+    transition: .5s;
+}
+
+.slide a {
+    position: absolute;
+    right: 0;
+}
+
+.slide a:nth-child(1) {
+    left: 0;
+}
+
+.slide a:nth-child(2) {
+    left: 100%;
+}
+
+.slide a:nth-child(3) {
+    left: 200%;
+}
+
+.slide a img {
+}
+
+.tabs {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+.tabs label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[id=tab1]:checked ~ .tabs label[for=tab1],
+input[id=tab2]:checked ~ .tabs label[for=tab2],
+input[id=tab3]:checked ~ .tabs label[for=tab3] {
+    background: crimson;
+}
+
+input[id=tab1]:checked ~ .slide {
+    right: 0;
+}
+
+input[id=tab2]:checked ~ .slide {
+    right: 100%;
+}
+
+input[id=tab3]:checked ~ .slide {
+    right: 200%;
+}

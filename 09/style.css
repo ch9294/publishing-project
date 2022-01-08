@@ -1,0 +1,105 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+/*font-family: 'Raleway', sans-serif;*/
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+/* Font Awesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    width: 330px;
+    height: 450px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .5s;
+    margin-right: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.detail {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    transition: .5s;
+}
+
+.detail div {
+    transform: translateY(90%);
+}
+
+.detail h2 {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.detail h2 span {
+    display: block;
+    font-weight: 700;
+    color: gold;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.detail p {
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+.detail i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    line-height: 20px;
+}
+
+.container .card:nth-child(1) .detail {
+    background: linear-gradient(to bottom, transparent, rgba(220, 20, 60, 0.2), crimson);
+}
+
+.container .card:nth-child(2) .detail {
+    background: linear-gradient(to bottom, transparent, rgba(30, 114, 225, 0.2), dodgerblue);
+}
+
+.container .card:nth-child(3) .detail {
+    background: linear-gradient(to bottom, transparent, rgba(144, 210, 44, 0.2), #90d22b);
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 5px 15px 15px lightgray;
+}
+
+.card:hover .detail {
+    top: 0;
+}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/*.container {*/
+/*    position: relative;*/
+/*    height: inherit;*/
+/*}*/
+
+/*.container input[name=tabmenu] {*/
+/*    display: none;*/
+/*}*/
+
+/*.slide {*/
+/*    width: 100vw;*/
+/*    height: inherit;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.slide-inner {*/
+/*    position: relative;*/
+/*    width: inherit;*/
+/*    height: inherit;*/
+/*    color: white;*/
+/*    transition: .5s;*/
+/*}*/
+
+/*.slide-inner span {*/
+/*    position: absolute;*/
+/*    width: inherit;*/
+/*    height: inherit;*/
+/*    text-align: center;*/
+/*    line-height: 100vh;*/
+/*    font-size: 90px;*/
+/*}*/
+
+/*.slide-inner span:nth-child(1) {*/
+/*    background: red;*/
+/*    left: 0;*/
+/*}*/
+
+/*.slide-inner span:nth-child(2) {*/
+/*    background: green;*/
+/*    left: 100%;*/
+/*}*/
+
+/*.slide-inner span:nth-child(3) {*/
+/*    background: blue;*/
+/*    left: 200%;*/
+/*}*/
+
+/*.btn {*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    z-index: 1;*/
+/*    bottom: 20px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.btn label {*/
+/*    display: inline-block;*/
+/*    width: 50px;*/
+/*    height: 5px;*/
+/*    background: white;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*input[id=tab1]:checked ~ .btn label[for=tab1] ,*/
+/*input[id=tab2]:checked ~ .btn label[for=tab2],*/
+/*input[id=tab3]:checked ~ .btn label[for=tab3] {*/
+/*    background: black;*/
+/*}*/
+
+/*input[id=tab1]:checked ~ .slide .slide-inner {*/
+/*    left: 0;*/
+/*}*/
+
+/*input[id=tab2]:checked ~ .slide .slide-inner {*/
+/*    left: -100%;*/
+/*}*/
+
+/*input[id=tab3]:checked ~ .slide .slide-inner {*/
+/*    left: -200%;*/
+/*}*/
+
+.tab-inner {
+    position: relative;
+}
+
+input[name=tabmenu] {
+    display: none;
+}
+
+.tabs {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100vh;
+    transition: .5s;
+}
+
+.items div {
+    height: 100vh;
+    width: 33.33333%;
+    float: left;
+    text-align: center;
+    line-height: 100vh;
+    color: white;
+}
+
+.items div:nth-child(1){
+    background: red;
+}
+
+.items div:nth-child(2){
+    background: green;
+}
+
+.items div:nth-child(3){
+    background: blue;
+}
+
+.items div h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+
+.btn {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    bottom: 5%;
+    text-align: center;
+}
+
+.btn label {
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+    background: white;
+    cursor: pointer;
+}
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+    background: black;
+}
+
+input[id=tab1]:checked ~ .tabs .items {
+    left: 0;
+}
+input[id=tab2]:checked ~ .tabs .items {
+    left: -100%;
+}
+input[id=tab3]:checked ~ .tabs .items {
+    left: -200%;
+}

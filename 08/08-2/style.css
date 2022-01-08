@@ -1,0 +1,74 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+/*font-family: 'Raleway', sans-serif;*/
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+/* Font Awesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input[type=checkbox] {
+    display: none;
+}
+
+form label {
+    display: block;
+    padding-left: 25px;
+}
+
+form label::before {
+    content: '\f00c';
+    font-family: fontawesome, serif;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 16px;
+    color: transparent;
+    transition: .2s;
+}
+
+form input[type=checkbox]:active + label::before{
+    transform: scale(0);
+}
+
+form input[type=checkbox]:checked + label::before {
+    border-color: transparent;
+    background: crimson;
+    color: white;
+}
+
+
+/*form input[id=chk1]:active ~ label[for=chk1]::before,*/
+/*form input[id=chk2]:active ~ label[for=chk2]::before,*/
+/*form input[id=chk3]:active ~ label[for=chk3]::before,*/
+/*form input[id=chk4]:active ~ label[for=chk4]::before {*/
+/*    transform: scale(0);*/
+/*}*/
+
+/*form input[id=chk1]:checked ~ label[for=chk1]::before,*/
+/*form input[id=chk2]:checked ~ label[for=chk2]::before,*/
+/*form input[id=chk3]:checked ~ label[for=chk3]::before,*/
+/*form input[id=chk4]:checked ~ label[for=chk4]::before {*/
+/*    border: none;*/
+/*    background: crimson;*/
+/*    color: white;*/
+/*}*/

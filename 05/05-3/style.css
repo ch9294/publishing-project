@@ -1,0 +1,45 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-inner {
+    /*border: 1px solid red;*/
+    width: 300px;
+    height: 350px;
+    position: relative;
+}
+input[name=tabmenu] {
+    display: none;
+}
+.content {
+    display: none;
+}
+.btn {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+.btn label {
+    background: lightgray;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.input[id=tab1]:checked ~ .slide1,
+.input[id=tab2]:checked ~ .slide2,
+.input[id=tab3]:checked ~ .slide3 {
+    display: block;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+    background-color: crimson;
+}

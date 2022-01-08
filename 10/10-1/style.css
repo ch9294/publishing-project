@@ -1,0 +1,131 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+/*font-family: 'Raleway', sans-serif;*/
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Font Awesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/*body {*/
+/*    !*font-family: 'Noto Sans KR', sans-serif;*!*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    background-image: url("images/snow-photo.jpg");*/
+/*    color: white;*/
+/*}*/
+
+/*.container {*/
+/*    height: 100vh;*/
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.search-container h2 {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    font-size: 40px;*/
+/*    font-weight: lighter;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.search-box {*/
+/*    background-color: white;*/
+/*    border-radius: 30px;*/
+/*    margin-top: 20px;*/
+/*    width: 600px;*/
+/*    height: 50px;*/
+/*    font-size: 0;*/
+/*}*/
+
+/*.search-box input[type=text] {*/
+/*    width: 80%;*/
+/*    height: inherit;*/
+/*    outline: none;*/
+/*    border: none;*/
+/*    font-size: 20px;*/
+/*    box-sizing: border-box;*/
+/*    border-radius: 30px 0 0 30px;*/
+/*    padding-left: 20px;*/
+/*}*/
+
+/*.search-box input[type=text]::placeholder {*/
+/*    color: gray;*/
+/*    font-style: italic;*/
+/*}*/
+
+/*.search-box button[type=submit] {*/
+/*    width: 20%;*/
+/*    height: inherit;*/
+/*    border: none;*/
+/*    background: orange;*/
+/*    color: white;*/
+/*    border-radius: 0 30px 30px 0;*/
+/*    font-size: 20px;*/
+/*}*/
+
+body {
+    /*height: 100vh;*/
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("images/snow-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search h1 {
+    text-align: center;
+    font-weight: normal;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search input[type=text] {
+    width: 300px;
+    padding:20px;
+    margin-right: -4px;
+    border-radius: 30px 0 0 30px;
+    font-size: 20px;
+}
+
+.search input[type=text]::placeholder {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.search input[type=submit]{
+    width: 100px;
+    padding: 20px;
+    border-radius: 0 30px 30px 0;
+}

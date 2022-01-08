@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*.hamburger {*/
+/*    position: relative;*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*}*/
+
+/*.hamburger input {*/
+/*    position: absolute;*/
+/*    display: inline-block;*/
+/*    width: inherit;*/
+/*    height: inherit;*/
+/*    margin: 0;*/
+/*    opacity: 0;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.menu {*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*    position: absolute;*/
+/*    width: inherit;*/
+/*}*/
+
+/*.menu span {*/
+/*    display: block;*/
+/*    height: 5px;*/
+/*    width: inherit;*/
+/*    background: black;*/
+/*    transition-duration: 1s;*/
+/*}*/
+
+/*.menu span:nth-child(2) {*/
+/*    margin: 20px 0;*/
+/*}*/
+
+/*.hamburger input:checked + .menu span:first-child {*/
+/*    transform: translateY(25px) rotate(45deg);*/
+/*}*/
+
+/*.hamburger input:checked +.menu span:nth-child(2) {*/
+/*    opacity: 0;*/
+/*}*/
+
+/*.hamburger input:checked + .menu span:last-child {*/
+/*    transform: translateY(-25px) rotate(-45deg);*/
+/*}*/
+
+
+.container {
+}
+
+input[id=trigger] {
+    display: none;
+}
+
+label[for=trigger] {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+label[for=trigger] span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+
+label[for=trigger] span:nth-child(1){
+    top:0;
+}
+
+label[for=trigger] span:nth-child(2){
+    top:50%;
+}
+
+label[for=trigger] span:nth-child(3){
+    top:100%;
+}
+
+input[id=trigger]:checked + label span:nth-child(1){
+    top:50%;
+    transform: rotate(45deg);
+}
+
+input[id=trigger]:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+input[id=trigger]:checked + label span:nth-child(3){
+    top:50%;
+    transform: rotate(-45deg);
+}

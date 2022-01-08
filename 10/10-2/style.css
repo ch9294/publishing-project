@@ -1,0 +1,155 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Font Awesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+}
+
+.container {
+    position: absolute;
+    border-radius: 5px;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 25px 30px;
+    box-sizing: border-box;
+    background: #f5f5f5;
+    box-shadow: 0 0 25px  rgba(0,0,0,0.2);
+}
+
+.container h4 {
+    margin: 0 0 5px;
+}
+
+.container h4:nth-of-type(2) {
+    margin-top: 20px;
+}
+
+.container div[class|=input] {
+    position: relative;
+    margin-top: 5px;
+}
+
+.container div[class|=input] input[id=email],
+.container div[class|=input] input[id=password] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.container div[class|=input]:hover input[id=email] {
+    border-color: dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
+
+.container div[class|=input] input::placeholder {
+    transition: .5s;
+}
+
+.container div[class|=input] input:focus::placeholder {
+    opacity: 0;
+}
+
+.container div[class|=input] label[for=email],
+.container div[class|=input] label[for=password] {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 0;
+    transform: translate(25%, -50%);
+    background-image: url("images/icon-email.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container div[class|=input] label[for=email] {
+    background-image: url("images/icon-email.png");
+}
+
+.container div[class|=input] label[for=password] {
+    background-image: url("images/icon-lock.png");
+}
+
+.input-check {
+    position: relative;
+    margin-top: 20px;
+}
+
+.input-check input[id=checkbox] {
+    display: none;
+}
+
+.input-check label[for=checkbox] {
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.input-check label[for=checkbox]::before {
+    content: '\f00c';
+    font-family: fontawesome, serif;
+    color: white;
+    display: inline-block;
+    font-size: 10px;
+    text-align: center;
+    line-height: 13px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.input-check input[id=checkbox]:checked ~ label[for=checkbox]::before {
+    content: '\f00c';
+    font-family: fontawesome, serif;
+    color: black;
+    background: yellowgreen;
+    border-color: transparent;
+}
+
+.input-check a {
+    position: absolute;
+    right: 0;
+}
+
+.input-check a:hover {
+    text-decoration: underline;
+}
+
+.container button[type=submit] {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px;
+    font-size: 25px;
+    color: white;
+    border: none;
+    background: #2991b1;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.container button[type=submit]:hover {
+   background: #2c778e;
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*.container {*/
+/*    color: white;*/
+/*    font-size: 18px;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.container div {*/
+/*    position: relative;*/
+/*    padding: 10px 30px;*/
+/*    background: crimson;*/
+/*    transition: .5s;*/
+/*}*/
+
+/*.container div:before {*/
+/*    position: absolute;*/
+/*    top: 100%;*/
+/*    left: 0;*/
+/*    content: attr(data-text);*/
+/*    padding: inherit;*/
+/*    background: dodgerblue;*/
+/*}*/
+
+/*.container:hover div {*/
+/*    transform: translateY(-100%);*/
+/*}*/
+
+.gnb {
+
+}
+
+.gnb a {
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gnb a:before,.gnb a:after {
+    content: attr(data-text);
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.gnb a:before {
+    top:0;
+    background: crimson;
+}
+
+.gnb a:after {
+    top: 100%;
+    background: royalblue;
+}
+
+.gnb a:hover:before {
+   top: -100%;
+}
+.gnb a:hover:after {
+    top: 0;
+}
