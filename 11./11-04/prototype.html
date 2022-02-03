@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="prototype.css">
+</head>
+<body>
+<section>
+	<ul class="btn">
+		<li data-alt="tab1" class="active">HTML5</li>
+		<li data-alt="tab2">CSS3</li>
+		<li data-alt="tab3">JQUERY</li>
+		<li data-alt="tab4">JAVASCRIPT</li>
+		<li data-alt="tab5">CSS FRAMEWORK</li>
+	</ul>
+	<div class="tabs">
+		<div id="tab1" class="active">tab1</div>
+		<div id="tab2">tab2</div>
+		<div id="tab3">tab3</div>
+		<div id="tab4">tab4</div>
+		<div id="tab5">tab5</div>
+	</div>
+</section>
+<script>
+	const btnContainer = document.querySelector('.btn');
+	const buttons = document.querySelectorAll('.btn li');
+	const tabs = document.querySelectorAll('.tabs div');
+
+	btnContainer.addEventListener('click', function (event) {
+		buttons.forEach((v) => {
+			v.classList.remove('active');
+		})
+		const btn = event.target;
+		btn.classList.add('active');
+		// const selectedIndex = Array.from(buttons).findIndex(v => v === btn);
+		activeTab(btn.dataset['alt']);
+	});
+
+	function activeTab(id) {
+		tabs.forEach((v) => v.classList.remove('active'));
+		const index = Array.from(tabs).findIndex((value)=>{
+			return value.id === id
+		});
+		tabs[index].classList.add('active');
+	}
+</script>
+</body>
+</html>

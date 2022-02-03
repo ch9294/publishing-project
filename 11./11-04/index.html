@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section>
+	<h1 class="title"><span>퍼블리싱 연습!</span>, 퍼블리싱 연습 중입니다.</h1>
+	<div class="search">
+		<input type="text" placeholder="검색어 입력해주세요~~">
+	</div>
+	<ul class="btn">
+		<li data-alt="tab1" class="active">HTML5</li>
+		<li data-alt="tab2">CSS3</li>
+		<li data-alt="tab3">JQUERY</li>
+		<li data-alt="tab4">JAVASCRIPT</li>
+		<li data-alt="tab5">CSS FRAMEWORK</li>
+	</ul>
+	<div class="tabs"></div>
+</section>
+<script>
+	const dataArr = [
+		{
+			imgAttr: {
+				src: 'images/platform-logo-01.png',
+				alt: 'HTML5'
+			},
+			description: `
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequatur nemo cum eos repellat
+			recusandae ullam natus cupiditate laboriosam, aliquid nisi aperiam laborum illo ut omnis saepe quam
+			eveniet voluptate, eaque voluptatum? Nobis, libero est. Deleniti perferendis minima modi cum, ut
+			mollitia ipsam unde totam laboriosam fuga sapiente qui autem ipsa repellendus, quis harum, illo
+			explicabo quidem aut officia eaque? Libero doloremque officiis eos. Illum quis architecto porro nemo
+			facilis itaque alias, fugiat possimus debitis iure a? Laborum consequatur esse natus reprehenderit
+			quae
+			velit ex repellendus. Excepturi, pariatur ad, sequi voluptatum quaerat placeat sed assumenda
+			repudiandae
+			quibusdam perferendis eum illo.`
+		},
+		{
+			imgAttr: {
+				src: 'images/platform-logo-02.png',
+				alt: 'CSS3'
+			},
+			description: `
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequatur nemo cum eos repellat
+			recusandae ullam natus cupiditate laboriosam, aliquid nisi aperiam laborum illo ut omnis saepe quam
+			eveniet voluptate, eaque voluptatum? Nobis, libero est. Deleniti perferendis minima modi cum, ut
+			mollitia ipsam unde totam laboriosam fuga sapiente qui autem ipsa repellendus, quis harum, illo
+			explicabo quidem aut officia eaque? Libero doloremque officiis eos. Illum quis architecto porro nemo
+			facilis itaque alias, fugiat possimus debitis iure a? Laborum consequatur esse natus reprehenderit
+			quae
+			velit ex repellendus. Excepturi, pariatur ad, sequi voluptatum quaerat placeat sed assumenda
+			repudiandae
+			quibusdam perferendis eum illo.`
+		},
+		{
+			imgAttr: {
+				src: 'images/platform-logo-03.png',
+				alt: 'JQUERY'
+			},
+			description: `
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequatur nemo cum eos repellat
+			recusandae ullam natus cupiditate laboriosam, aliquid nisi aperiam laborum illo ut omnis saepe quam
+			eveniet voluptate, eaque voluptatum? Nobis, libero est. Deleniti perferendis minima modi cum, ut
+			mollitia ipsam unde totam laboriosam fuga sapiente qui autem ipsa repellendus, quis harum, illo
+			explicabo quidem aut officia eaque? Libero doloremque officiis eos. Illum quis architecto porro nemo
+			facilis itaque alias, fugiat possimus debitis iure a? Laborum consequatur esse natus reprehenderit
+			quae
+			velit ex repellendus. Excepturi, pariatur ad, sequi voluptatum quaerat placeat sed assumenda
+			repudiandae
+			quibusdam perferendis eum illo.`
+		},
+		{
+			imgAttr: {
+				src: 'images/platform-logo-04.png',
+				alt: 'JAVASCRIPT'
+			},
+			description: `
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequatur nemo cum eos repellat
+			recusandae ullam natus cupiditate laboriosam, aliquid nisi aperiam laborum illo ut omnis saepe quam
+			eveniet voluptate, eaque voluptatum? Nobis, libero est. Deleniti perferendis minima modi cum, ut
+			mollitia ipsam unde totam laboriosam fuga sapiente qui autem ipsa repellendus, quis harum, illo
+			explicabo quidem aut officia eaque? Libero doloremque officiis eos. Illum quis architecto porro nemo
+			facilis itaque alias, fugiat possimus debitis iure a? Laborum consequatur esse natus reprehenderit
+			quae
+			velit ex repellendus. Excepturi, pariatur ad, sequi voluptatum quaerat placeat sed assumenda
+			repudiandae
+			quibusdam perferendis eum illo.`
+		},
+		{
+			imgAttr: {
+				src: 'images/platform-logo-05.png',
+				alt: 'CSS FRAMEWORK'
+			},
+			description: `
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequatur nemo cum eos repellat
+			recusandae ullam natus cupiditate laboriosam, aliquid nisi aperiam laborum illo ut omnis saepe quam
+			eveniet voluptate, eaque voluptatum? Nobis, libero est. Deleniti perferendis minima modi cum, ut
+			mollitia ipsam unde totam laboriosam fuga sapiente qui autem ipsa repellendus, quis harum, illo
+			explicabo quidem aut officia eaque? Libero doloremque officiis eos. Illum quis architecto porro nemo
+			facilis itaque alias, fugiat possimus debitis iure a? Laborum consequatur esse natus reprehenderit
+			quae
+			velit ex repellendus. Excepturi, pariatur ad, sequi voluptatum quaerat placeat sed assumenda
+			repudiandae
+			quibusdam perferendis eum illo.`
+		}
+	]
+	const btn = document.querySelector('.btn');
+	const tabs = document.querySelector('.tabs');
+
+	tabs.innerHTML = dataArr.map((data, index) => {
+		return `<article id="tab${index + 1}" class="${index === 0 ? 'active' : ''}">
+	<h2>${data.imgAttr.alt}</h2>
+	<div class="contents">
+	<img src="${data.imgAttr.src}" alt="${data.imgAttr.alt}">
+	<p class="description">${data.description}</p>
+	</div>
+	</article>`;
+	}).join('');
+
+	btn.addEventListener('click', (event) => {
+		Array.from(btn.children).forEach(e => e.classList.remove('active'));
+		const target = event.target;
+
+		if (target.tagName === "LI") {
+			const alt = target.dataset.alt;
+			console.log(alt);
+			target.classList.add('active');
+			document.querySelectorAll('.tabs article').forEach(tab => tab.classList.remove('active'));
+			document.querySelector(`#${alt}`).classList.add('active');
+		}
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="item">
+	<img src="images/model-female.png" alt="">
+	<div class="item-info">
+		<div class="main-info">
+			<div class="title-info"></div>
+			<div class="price-info"></div>
+		</div>
+		<div class="divide-line"></div>
+		<div class="pickers-info">
+			<div class="picker-size">
+				<h4>Sizes</h4>
+				<ul>
+					<li><a href="#none">XS</a></li>
+					<li><a href="#none">S</a></li>
+					<li><a href="#none">M</a></li>
+					<li><a href="#none">L</a></li>
+					<li><a href="#none">XL</a></li>
+				</ul>
+				<span class="heart"><i class="fa fa-heart-o"></i></span>
+			</div>
+			<div class="picker-color">
+				<h4>Colors</h4>
+				<ul>
+					<li id="olive"></li>
+					<li id="red"></li>
+					<li id="pink"></li>
+					<li id="skyblue"></li>
+					<li id="blue"></li>
+				</ul>
+			</div>
+			<button class="btn-add">Add to Cart</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	const sizePicker = document.querySelector('.picker-size ul');
+	const colorPicker = document.querySelector('.picker-color ul');
+	const heartIcon = document.querySelector('.heart');
+
+	sizePicker.addEventListener('click', (event) => {
+		const find = Array.from(event.currentTarget.children)
+				.find((li) => li.children[0].classList.contains('active'));
+		if (find !== undefined) {
+			find.children[0].classList.remove('active');
+		}
+		if (event.target.tagName === "A") {
+			event.target.classList.add('active')
+		}
+	});
+
+	colorPicker.addEventListener('click', function (event) {
+		const find = Array.from(this.children)
+				.find((li) => li.classList.contains('active'));
+
+		if (find !== undefined) {
+			find.classList.remove('active');
+		}
+
+		if(event.target.tagName === "LI"){
+			event.target.classList.add('active');
+		}
+	});
+
+	heartIcon.addEventListener('click',(event) => {
+
+	})
+</script>
+</body>
+</html>

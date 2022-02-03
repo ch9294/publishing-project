@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+		  integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<div class="container">
+	<div class="star-container">
+		<i class="fa fa-star"></i>
+		<i class="fa fa-star"></i>
+		<i class="fa fa-star"></i>
+		<i class="fa fa-star"></i>
+		<i class="fa fa-star"></i>
+	</div>
+	<img class="rating-image" src="images/star-lv1.png" alt="">
+	<span class="rating-text">별점 주실거죠? ㅎ</span>
+</div>
+<script>
+	const stars = document.querySelectorAll('i.fa.fa-star');
+	const starContainer = document.querySelector('.star-container');
+	const ratingImg = document.querySelector('.rating-image');
+	const ratingText = document.querySelector('.rating-text');
+
+	starContainer.addEventListener('click', event => {
+		if (event.target === starContainer) {
+			return;
+		}
+		stars.forEach(v => v.classList.remove('active'));
+		const selectedIndex = Array.from(stars).findIndex((v) => {
+			return v === event.target;
+		});
+		addActive(event.target);
+		switchImgAndText(selectedIndex + 1);
+	});
+
+	function addActive(current) {
+		current.classList.add('active');
+		if (!current.previousElementSibling) { // 이전 형제 노드가 없을때
+			return;
+		}
+		addActive(current.previousElementSibling);
+	}
+
+	function switchImgAndText(count) {
+		ratingImg.style.visibility = 'visible';
+		switch (count) {
+			case 1: {
+				ratingImg.setAttribute('src', 'images/star-lv1.png');
+				ratingText.textContent = "별로에요"
+				break;
+			}
+			case 2: {
+				ratingImg.setAttribute('src', 'images/star-lv2.png');
+				ratingText.textContent = "보통이에요"
+				break;
+			}
+			case 3: {
+				ratingImg.setAttribute('src', 'images/star-lv3.png');
+				ratingText.textContent = "그냥 그래요"
+				break;
+			}
+			case 4: {
+				ratingImg.setAttribute('src', 'images/star-lv4.png');
+				ratingText.textContent = "맘에 들어요"
+				break;
+			}
+			case 5: {
+				ratingImg.setAttribute('src', 'images/star-lv5.png');
+				ratingText.textContent = "아주 좋아요"
+				break;
+			}
+		}
+	}
+</script>
+</body>
+</html>

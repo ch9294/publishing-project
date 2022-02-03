@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+}
+
+.navi {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navi li {
+}
+
+.navi li a {
+    font-size: 4em;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.navi li a::before {
+    content: attr(data-text);
+    color: yellowgreen;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: .5s;
+    overflow: hidden;
+    width: 0;
+}
+
+.navi li a:hover::before {
+    width: 100%;
+}
+
+.photo {
+    height: 100vh;
+    transition: .5s;
+    background-image: url("images/portrait-initial.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

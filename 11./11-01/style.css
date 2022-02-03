@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.container h2 {
+    margin: 30px 0;
+    padding: 0;
+}
+
+.container h2 span {
+    color: crimson;
+}
+
+.container input[name=photo] {
+    display: none;
+}
+
+.container label[for^=radio]{
+    cursor: pointer;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: .3s;
+}
+
+.container label[for^=radio] img {
+    width: inherit;
+    height: inherit;
+}
+
+.container label[for^=radio] + label {
+    margin-left: 10px;
+}
+
+.container input[id=radio1]:checked ~ label[for=radio1],
+.container input[id=radio2]:checked ~ label[for=radio2],
+.container input[id=radio3]:checked ~ label[for=radio3],
+.container input[id=radio4]:checked ~ label[for=radio4]
+{
+    border-radius: 50%;
+    filter: grayscale(0);
+}
+
+.description {
+    padding: 10px 30px;
+    line-height: 25px;
+}
+.profile-name {
+    display: block;
+    margin: 15px 0;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+	<h2><span>CodingWorks</span> Publishing Online Class with Inflearn</h2>
+	<input type="radio" name="photo" id="radio1" checked>
+	<input type="radio" name="photo" id="radio2">
+	<input type="radio" name="photo" id="radio3">
+	<input type="radio" name="photo" id="radio4">
+	<label for="radio1">
+		<img src="images/face-01.jpg" alt="">
+	</label>
+	<label for="radio2">
+		<img src="images/face-02.jpg" alt="">
+	</label>
+	<label for="radio3">
+		<img src="images/face-03.jpg" alt="">
+	</label>
+	<label for="radio4">
+		<img src="images/face-04.jpg" alt="">
+	</label>
+	<p class="description">
+		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita harum recusandae cum eaque aut odit officiis
+		atque, nobis quam laudantium omnis totam sunt eum provident facilis vero ex? Magnam laborum tempore qui eveniet!
+		Ullam, porro ipsa. Nisi eveniet delectus, eligendi labore dolores quos excepturi ut ratione nihil maiores quidem
+		fugiat voluptatem modi doloribus, iure et voluptates numquam adipisci enim, cum asperiores. Omnis, nulla. Magni
+		sit labore quidem unde quae porro ullam ab ut rem aut, voluptas, praesentium tempora dicta consectetur!
+		<span class="profile-name">Sally, Web Desginer</span>
+	</p>
+</div>
+
+<script>
+	const descArr = [
+		{
+			description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita harum recusandae cum eaque aut odit officiis atque, nobis quam laudantium omnis totam sunt eum provident facilis vero ex? Magnam laborum tempore qui eveniet! Ullam, porro ipsa. Nisi eveniet delectus, eligendi labore dolores quos excepturi ut ratione nihil maiores quidem fugiat voluptatem modi doloribus, iure et voluptates numquam adipisci enim, cum asperiores. Omnis, nulla. Magni sit labore quidem unde quae porro ullam ab ut rem aut, voluptas, praesentium tempora dicta consectetur!',
+			name: 'Sally, Web Designer'
+		}, {
+			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam similique quis nesciunt quae soluta, velit assumenda aperiam inventore voluptatibus hic id asperiores, molestias corrupti reiciendis at perferendis dolor cupiditate ut aliquid! Eius, impedit mollitia ut labore libero aspernatur dolore facilis praesentium, tempora magnam quibusdam sint quas numquam quos illum deserunt voluptates delectus suscipit ad voluptatibus. Voluptatum sequi deleniti veniam temporibus repellendus, voluptatem id eveniet, a excepturi, accusamus corporis ut officiis!',
+			name: 'Amy, Graphic Designer'
+		}, {
+			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae quasi repellendus soluta unde veritatis rem odio hic, temporibus minima optio, assumenda et natus molestiae esse. Exercitationem voluptatibus debitis ab iure harum tempore at soluta illo voluptates a non nisi, saepe quas ipsa porro ipsam dolor eum laudantium enim itaque quae. Ducimus ut reiciendis quas magnam rem ea temporibus ipsa expedita, repellat nulla iure voluptates voluptatum explicabo labore cum? Ea dolore numquam quasi ab obcaecati, voluptatem dignissimos quod autem veritatis?',
+			name: 'Jung Ho, Developer'
+		}, {
+			description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam natus praesentium nemo voluptates modi! Excepturi facere at repudiandae labore asperiores optio velit dignissimos unde. A exercitationem, sed reiciendis autem nam assumenda, alias molestias fugit quibusdam eius fugiat quidem distinctio qui corrupti? Fuga vel corporis provident, alias laboriosam facilis ipsam tempora necessitatibus nobis animi? At exercitationem culpa, mollitia voluptates dolorem earum veritatis quas omnis, dolorum modi delectus eius laborum iure. Ab accusamus rem omnis! Accusamus maxime saepe quidem ad a esse?',
+			name: 'Chris, Printing Designer'
+		},
+	]
+	const radioArr = document.querySelectorAll('.container input[type=radio]');
+	const description = document.querySelector('.description');
+	const profileName = document.querySelector('.profile-name');
+
+	radioArr.forEach((btn, i) => {
+		btn.addEventListener('change', event => {
+			if (event.target.checked) {
+				description.firstChild.textContent = descArr[i].description;
+				profileName.innerText = descArr[i].name;
+			}
+		})
+	})
+</script>
+</body>
+</html>

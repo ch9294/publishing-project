@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    background-color: #333;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.star-container {}
+
+.fa.fa-star.active{
+    color: yellow;
+    text-shadow: 0 0 5px yellow;
+}
+
+.rating-image {
+    visibility: hidden;
+    margin-left: 30px;
+}
+
+.rating-text {
+    color: white;
+}
+

@@ -1,0 +1,59 @@
+/* Google Web Font : Montserrat */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap');
+
+/* Google Web Font : Noto Sans KR */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    /*border: 1px solid;*/
+    width: 500px;
+    text-align: center;
+}
+.container h1 {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.container h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+    margin: 20px 0;
+}
+
+.container h1 span{
+    color: crimson;
+}
+
+.container form {
+    border: 1px solid;
+    padding: 40px 0;
+}
+
+.container form h2 {
+    margin: 0 0 15px;
+}
+
+.input-age {
+    outline: none;
+    border: 1px solid lightgray;
+    padding: 7px;
+}
+
+button[type=submit] {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}

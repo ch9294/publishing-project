@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+	<h1>JavaScript <span>var, val(), if</span></h1>
+	<form action="">
+		<h2>20세 이상 성인인증 확인하기</h2>
+		<input type="number" class="input-age" placeholder="나이를 숫자로 입력">
+		<button type="submit">성인인증</button>
+	</form>
+</div>
+<script>
+	const inputAge = document.querySelector('.input-age');
+	const btnSubmit = document.querySelector('button[type=submit]');
+
+	btnSubmit.addEventListener('click', e => {
+		e.preventDefault();
+		const age = parseInt(inputAge.value);
+		if (age) {
+			if (age < 20) {
+				alert('미성년자입니다.')
+			} else {
+				alert('성인입니다.')
+			}
+		} else {
+			alert('나이값을 입력해주세요')
+		}
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+section {
+
+}
+
+.title {
+    margin: 0 0 20px;
+    text-align: center;
+    padding: 0;
+}
+
+.title span {
+    color: crimson;
+}
+
+.search {
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 1px 2px gray;
+}
+
+.search input {
+    display: inline-block;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 0 10px 40px;
+
+}
+
+.search input::placeholder {
+    transition: .5s;
+    font-style: italic;
+}
+
+.search input:focus::placeholder {
+    opacity: 0;
+}
+
+.search::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5px;
+    background-image: url("images/search-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    list-style: none;
+    padding: 0 0 0 10px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.btn li {
+    float: left;
+    padding: 10px 30px;
+    position: relative;
+    background-color: #eee;
+    border-right: 1px solid #ddd;
+}
+
+.btn li.active {
+    border-top: 1px solid red;
+    background-color: white;
+}
+
+.tabs {
+    background-color: white;
+    width: 800px;
+}
+
+.tabs article {
+    width: 100%;
+    display: none;
+}
+
+.tabs article.active {
+    display: block;
+}
+
+.tabs h2 {
+    text-align: center;
+    margin: 0 20px;
+    padding-top: 30px;
+}
+
+.contents {
+    display: flex;
+    margin-top: 20px;
+    padding: 0 15px 30px;
+}
+
+.contents img {
+    height: 200px;
+}
+
+.contents p {
+    margin: 0;
+    padding: 0 10px;
+    font-weight: lighter;
+    line-height: 25px;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="anwser.css">
+</head>
+<body>
+<div class="container">
+	<ul class="navi">
+		<li data-image="images/portrait-01.jpg"><a href="#none" data-text="ABOUT">ABOUT</a></li>
+		<li data-image="images/portrait-02.jpg"><a href="#none" data-text="INSTRUCTOR">INSTRUCTOR</a></li>
+		<li data-image="images/portrait-03.jpg"><a href="#none" data-text="CLASS">CLASS</a></li>
+		<li data-image="images/portrait-04.jpg"><a href="#none" data-text="LOCATION">LOCATION</a></li>
+	</ul>
+	<div class="photo"></div>
+</div>
+<script>
+	const navi = document.querySelector('.navi');
+	const photo = document.querySelector('.photo');
+
+	navi.addEventListener('mouseover', (event) => {
+		const target = event.composedPath().find((v) => v.tagName === "LI");
+		const imgSrc = target.dataset.image;
+		console.log(imgSrc);
+		photo.style.backgroundImage = `url(${imgSrc})`;
+	});
+
+	navi.addEventListener('mouseout', () => {
+		photo.style.backgroundImage = `url(images/portrait-initial.jpg)`;
+	});
+</script>
+</body>
+</html>

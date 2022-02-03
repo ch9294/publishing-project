@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="list">
+	<div data-bg="one">ABOUT</div>
+	<div data-bg="two">INSTRUCTOR</div>
+	<div data-bg="three">CLASS</div>
+	<div data-bg="four">LOCATION</div>
+</section>
+
+<div class="background one"></div>
+<div class="background two"></div>
+<div class="background three"></div>
+<div class="background four"></div>
+
+<script>
+	const list = document.querySelector('.list');
+
+	list.addEventListener('mouseover', event => {
+		if (event.target.tagName === 'DIV') {
+			const bg = document.querySelector(`.${event.target.dataset.bg}`);
+			bg.style.animationName = 'fadeIn';
+			bg.style.animationDuration = '1s';
+		}
+	})
+</script>
+</body>
+</html>
